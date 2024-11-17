@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 const NavBar = ( {user} ) => {
     return(
         <>
@@ -18,7 +19,7 @@ const NavBar = ( {user} ) => {
                 </nav>
             )
         }
-            <h1>Hello World!</h1>
+            
         </>
     )
 }
