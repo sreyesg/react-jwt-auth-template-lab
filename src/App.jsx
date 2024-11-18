@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 import Dashboard from './components/Dashboard/Dashboard';
 import Landing from './components/Landing/Landing';
 import SignupForm from './components/SignupForm/SignupForm';
+import SigninForm from './components/SigninForm/SigninForm';
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -23,6 +24,7 @@ const App = () => {
 
         }
         <Route path='/signup' element={<SignupForm setUser={setUser}/>} />
+        <Route path='/signin' element={<SigninForm setUser={setUser}/>} />
       </Routes>
       
     </>
