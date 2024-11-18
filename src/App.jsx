@@ -9,7 +9,7 @@ import SignupForm from './components/SignupForm/SignupForm';
 
 const App = () => {
   const [user, setUser] = useState(null)
-  console.log('from APP', user)
+
 
   return (
     <>

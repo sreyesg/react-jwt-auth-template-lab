@@ -1,8 +1,8 @@
-const BACKEND_URL = "http://localhost:3000"
+const BACKEND_URL = import.meta.env.VITE_EXPRESS_BACKEND_URL
 
 const signup = async(formData) => {
     try {
-        
+        console.log(BACKEND_URL,'BACKEND')
         const res = await fetch(`${BACKEND_URL}/users/signup`, {
             method: "POST",
             headers: {'content-type': 'application/json'},
