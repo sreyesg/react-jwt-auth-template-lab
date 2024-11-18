@@ -9,6 +9,7 @@ import SignupForm from './components/SignupForm/SignupForm';
 
 const App = () => {
   const [user, setUser] = useState(null)
+  console.log('from APP', user)
 
   return (
     <>
@@ -21,7 +22,7 @@ const App = () => {
         )
 
         }
-        <Route path='/signup' element={<SignupForm />} />
+        <Route path='/signup' element={<SignupForm setUser={setUser}/>} />
       </Routes>
       
     </>
