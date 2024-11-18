@@ -21,6 +21,22 @@ const signup = async(formData) => {
 
 }
 
+const signin = async(formData) => {
+    const res = await fetch(`${BACKEND_URL}/users/signin`, {
+        method: 'POST',
+        headers: {'content-type':'application/json'},
+        body: JSON.stringify(formData)
+    })
+    const json = await res.json()
+    if(json.error){
+        return new Error(json.error)
+    }
+    if(json.token){
+        const user = JSON.parse(atob(json.token.split('.')[1]))
+        return user
+    }
+    
+}
 export {
-    signup
+    signup, signin
 }
